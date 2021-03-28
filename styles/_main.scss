@@ -1,0 +1,109 @@
+@import "variables";
+
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    .search-sc{
+        display: inherit;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
+        margin-top: 100px;
+
+        h1{
+            @include lyrics(0, $font-montserrat, var(--violet), 25px, 700, 33px);
+            text-align: center;
+            width: 60%;
+            span{color: var(--turquose) ;}
+        }
+        
+        .img-portada{
+            margin-top: 1.5em;
+            width: 274px;
+            height: 130px;
+        }
+
+        .d-search{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 90%;
+            border: 1px solid var(--violet);
+            border-radius: 27px;
+            z-index: 1;
+
+            .d-input{
+                display: flex;
+                width: 100%;
+                align-items: left;
+                
+                input{
+                    border: none;
+                    width: 90%;
+                    @include lyrics(0, $font-roboto, var(--black), 16px, 500, 19px);
+                    text-indent: 54px;
+                    text-align: left;
+                    height: 50px;
+                    background: none;
+                    
+                }
+                input:focus{
+                    outline: none;
+                    outline-width: 0;
+                    box-shadow: none;
+                }
+                button{
+                    display: block;
+                    border: none;
+                    background: none;
+                    margin-right: 8px;
+                    .close{
+                        width: 14px;
+                        height: 14px;
+                        cursor: pointer;
+                    }
+
+                    #close-search-img{display: block;}
+                    
+                }
+                button:focus{
+                    outline: none;
+                    outline-width: 0;
+                    box-shadow: none;
+                }
+                
+            }
+        }
+    }
+
+    .l-trends{
+        width: 100%;
+        height: 18vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h2{
+            @include lyrics(0, $font-montserrat, var(--violet), 16px, 700, 25px);
+            text-align: center;
+            margin: 31px 0 0 2px ;
+        }
+
+        .link-ct{
+            display: flex;
+            width: 60%;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            a{  
+                @include lyrics(0, $font-montserrat, var(--violet), 14px, 500, 25px);
+                text-align: center;
+                text-decoration: none;
+                margin-left: 0.5em;
+            }
+        }
+    }
+}
+

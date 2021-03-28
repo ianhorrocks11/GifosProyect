@@ -1,0 +1,46 @@
+/*==== GOOGLE FONTS ====*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Roboto:wght@400;700;900&display=swap');
+
+/*==== LIGHT THEME ====*/
+:root {
+    --menu_desktop: white;
+    --menu: rgba(87, 46, 229, 0.9);
+    --line_top_bot: #572EE5;
+    --violet: #572EE5;
+    --trend: #F3F5F8;
+    --turquose: #50E3C2;
+    --gray: #CDD6E0;
+    --black: #000000;
+    --white: white;
+    --active: #9CAFC3;
+}
+
+/*==== DARK THEME ====*/
+[data-theme = "dark"] {
+    --menu_desktop: #37383C;
+    --menu: rgba(0, 0, 0, 0.9);
+    --line_top_bot: #000000;
+    --span_menu: #ffffff;
+    
+}
+
+/*==== FONTS VAR ====*/
+$font-roboto: "Roboto", sans-serif;
+$font-montserrat: "Montserrat", sans-serif;
+
+@mixin lyrics($spacing, $font, $color, $size, $weigth, $line) {
+    letter-spacing: $spacing;
+    font-family: $font;
+    color: $color;
+    font-size: $size;
+    font-weight: $weigth;
+    line-height: $line;
+  }
+
+  @mixin button {
+    background: none;
+    border-radius: 25px;
+    border: 1px solid ;
+    width: 127px;
+    height: 50px;
+  }

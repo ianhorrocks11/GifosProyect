@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gifOS</title>
+    <link rel="shortcut icon" href="imgs/logo-desktop.svg" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="violet-line"></div>
+        <nav>
+            <a href="#"><img class="logo" src="imgs/logo-desktop.svg" alt="logo-desktop"></a>
+            <div class="menu">
+                <input type="checkbox" name="hamburguesa" id="hamburguesa">
+                
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul class="lista">
+                    <li><a href="#">Modo Nocturno</a></li>
+
+                    <li><a href="favoritos.html">Favoritos</a></li>
+
+                    <li><a href="#">Mis GIFOS</a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+
+
+
+    <main>
+        
+        <section class="favoritos">
+            <img src="imgs/icon-fav.svg" alt="Fav-icon">
+            <h2>Favoritos</h2>
+            <div id="miss-fav" class="miss-fav-hidden">
+                <img src="imgs/icon-mis-gifos-sin-contenido.svg" alt="sin-contenido" />
+                <h3>¡Guarda tu primer GIFO en Favoritos <br>
+                    para que se muestre aquí!</h3>
+            </div>
+            <div id="con-contenido" class="sin-contenido">
+            </div>  
+      
+        </section>
+        <section class="trends-sc">
+            <h2>Trending GIFOS</h2>
+            <p>Mira los últimos GIFOS de nuestra comunidad.</p>
+            <div class="load-cs">
+                <ul id="gif-list">
+                    <li><img src="" alt=""></li>
+                    <li><img src="images/assets/patrick.gif" alt=""></li>
+                    <li><img src="images/assets/viejitagif.gif" alt=""></li>
+                    <li><img src="images/ok.svg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <h3>Compartir en:</h3>
+        <div class="icon-ct">
+            <a href=""><img src="imgs/icon_facebook.svg" alt="Facebook"></a>
+            <a href=""><img src="imgs/icon-twitter.svg" alt="Twitter"></a>
+            <a href=""><img src="imgs/icon_instagram.svg" alt="Instagram"></a>
+        </div>
+        <p id="© GIFOS 2020 All Rights Reserved"></p>
+        <div class="violet-line"></div>
+
+    </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

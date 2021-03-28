@@ -1,0 +1,162 @@
+@import "variables";
+
+header {
+  font-family: $font-montserrat;
+  background-color: var(--menu_desktop);
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+
+  .violet-line {
+    background-color: var(--line_top_bot);
+    height: 5px;
+  }
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    z-index: 9;
+    .d-logo{
+    img{
+      height: 49px;
+      width: 56px;
+      margin: 29px 0 17.2px 22px;
+    }
+    h2{
+      position: absolute;
+      z-index: 7;
+      top: 63px;
+      left: 38px;
+      @include lyrics(0, $font-roboto, var(--violet), 16px, 900, 0);
+    }
+
+  }
+
+    .menu {
+      margin: 47px 26px 34px 0;
+
+      ul{
+        width: 100%;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        overflow: hidden;
+        list-style: none;
+        background-color: var(--menu);
+        height: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: height 0.5s ease;
+        z-index: 7;
+
+        li {
+          font-weight: 600;
+          font-size: 15px;
+          line-height: 30px;
+          position: relative;
+
+          a {
+            color: var(--white);
+            text-align: center;
+            position: relative;
+            display: block;
+            text-decoration: none;
+          }
+
+          a:hover {
+            text-decoration: underline;
+            text-decoration-color: var(--turquose);
+          }
+
+          a:active {
+            color: var(--active);
+          }
+
+          .separator-ul {
+            border: 0;
+            border-top: 0.1px solid white;
+            width: 41px;
+            color: white;
+            size: 0.1px;
+            margin: auto;
+            margin-top: 10.9px;
+            padding-bottom: 14px;
+          }
+        }
+
+        li:first-child {
+          margin-top: 32px;
+        }
+        
+        .create-gif{
+            display: none;
+        }
+      }
+
+      // despliegue menu
+      
+      input[type="checkbox"]:checked ~ ul {
+        height: 800px;
+        transition: all 0.5 ease-in-out;
+      }
+      span:first-child {
+        transform-origin: 0% 0%;
+      }
+      span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+      }
+
+      //animacion cruz
+
+      input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(0px, 1px);
+      }
+      input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+      }
+      input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(1px, -2px);
+      }
+
+      input {
+        position: absolute;
+        display: block;
+        opacity: 0;
+        z-index: 2;
+        cursor: pointer;
+      }
+
+      span {
+        display: block;
+        width: 17px;
+        height: 1.9px;
+        margin-bottom: 4px;
+        border-radius: 2mm;
+        background: var(--violet);
+        z-index: 3;
+        transform-origin: 3px 0px;
+        transition: transform 0.5s ease, opacity 0.55s ease;
+      }
+    }
+  }
+}
+
+@media (min-width: 769px) {
+    header{
+        nav{
+            height: 90px;
+            a.logo{
+                width: 68px;
+                height: 60px;
+                margin: 23px 0 12.9px 156px;
+            }
+        }
+    }
+}
